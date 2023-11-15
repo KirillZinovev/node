@@ -14,6 +14,15 @@ app.use(express.urlencoded({ extendend: true }));
 
 // console.log(dirname + "/public/favicon.png");
 app.use(express.static(path.join(__dirname, "public")));
+app.use(
+  "css/bootstrap.css",
+  express.static(
+    path.join(
+      __dirname,
+      "public/css/bootstrap-5.3.2/dist/css/bootstrap.min.css"
+    )
+  )
+);
 
 app.use(favicon(__dirname + "/public/favicon.png"));
 

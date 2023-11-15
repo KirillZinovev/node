@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
-
+    <link
+      rel="stylesheet"
+      href="./public/css/bootstrap-5.3.2/dist/css/bootstrap.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
+    <header class="header"><%- include ("header.ejs") %></header>
+
     <main>
       <div>
         <svg
@@ -110,11 +115,5 @@
         <a class="btn-link" href="#">Go Back Home</a>
       </div>
     </main>
-
-    <p>Page not found</p>
-    <%if(err.status === 404){%>
-    <h1><%=err.message%></h1>
-    <img src="<%=link%>" alt="fddff" />
-    <%}%>
   </body>
 </html>
